@@ -37,8 +37,8 @@ String formatBytes(size_t bytes) {
 }
 
 // WIFI
-String ssid    = "ssid";
-String password = "password";
+String ssid    = "DG1670AF2";
+String password = "DG1670A6ACDF2";
 String espName    = "Roombot";
 
 // webserver
@@ -124,8 +124,10 @@ void handle_root()
 // Setup
 void setup(void)
 {
+
   Serial.begin(115200);
   mySerial.begin(115200);
+    Serial.println("hello!");
   pinMode(SERIAL_RX, INPUT);
   pinMode(SERIAL_TX, OUTPUT);
   // Check if SPIFFS is OK
@@ -149,7 +151,7 @@ void setup(void)
       FSUsed = fs_info.usedBytes;
     }
   }
-  //mySerial.begin(115200);  // uncomment this line to use SoftSerial
+  mySerial.begin(115200);  // uncomment this line to use SoftSerial
   WiFi.begin(ssid.c_str(), password.c_str());
   int i = 0;
   while (WiFi.status() != WL_CONNECTED && i < 31)

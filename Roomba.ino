@@ -1,13 +1,15 @@
 // Includes
-#include <Time.h>
+
+#include <Time.h> //install
 #include <ESP8266mDNS.h>
 #include <ESP8266WiFi.h>
 #include <WiFiClient.h>
 #include <ESP8266WebServer.h>
 //#include <EEPROM.h>
 #include <SoftwareSerial.h>
-#include "Base64.h"
+#include "Base64.h" //install https://github.com/adamvr/arduino-base64
 #include <FS.h>
+
 
 String roombotVersion = "0.3.6";
 String WMode = "1";
@@ -39,8 +41,8 @@ String formatBytes(size_t bytes) {
 }
 
 // WIFI
-String ssid    = "ssid";
-String password = "password";
+String ssid    = "DG1670AF2";
+String password = "DG1670A6ACDF2";
 String espName    = "Roombot";
 
 // webserver
